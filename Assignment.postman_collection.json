@@ -1,0 +1,93 @@
+{
+	"info": {
+		"name": "Assignment",
+		"_postman_id": "5bde79f9-0156-81bb-9eca-cbbbf1cabeda",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/subscriptions/2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"Changed Bundle\"\n}"
+				},
+				"url": "http://localhost:8080/api/subscriptions/1",
+				"description": "Get Specific Subscription details\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/subscriptions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"Changed Bundle\"\n}"
+				},
+				"url": "http://localhost:8080/api/subscriptions/",
+				"description": "Get All Subscriptions\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/subscriptions",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Subscription Added 1\",\n    \"monthlyPrice\": 102\n}"
+				},
+				"url": "http://localhost:8080/api/subscriptions/",
+				"description": "Add new Subscription\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/subscriptions",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"UPDATE International Voice Subscription\",\n    \"monthlyPrice\": 101\n  \n}"
+				},
+				"url": "http://localhost:8080/api/subscriptions/1",
+				"description": "Add new Subscription\n"
+			},
+			"response": []
+		}
+	]
+}
